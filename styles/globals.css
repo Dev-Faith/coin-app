@@ -1,6 +1,14 @@
 :root{
-  --primary-color: #FFEF82;
-  --secondary-color: #BABD42;
-  --accent-color: #BABD42;
-  --tertiary-color: #82954B;
+  --primary-color: rgb(255, 239, 130);
+  --secondary-color: rgb(239, 211, 69);
+  --accent-color: rgb(186, 189, 66);
+  --tertiary-color:rgb(130, 149, 75);
+}
+
+a{
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
 }

@@ -1,0 +1,55 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.leftContainer{
+    display: flex;
+    align-tems: center;
+    gap: 2rem;
+}
+
+.navLists{
+    display: flex;
+    align-tems: center;
+    gap: 1rem;
+}
+
+.navList{
+    display: flex;
+    align-items: center;
+}
+
+.beginnerZone{
+    display: flex;
+    align-items: center;
+    height: 1rem;
+    border: none;
+    background-color: rgba(239, 226, 161, 1);
+    border-radius: .5rem;
+    padding:.5rem;
+    color: rgba(138, 117, 8, 1);
+    text-align: center;
+}
+
+.logoAlign {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.gridAlign{
+    align-items: center;
+}
+
+.logo{
+    position: relative;
+    top: -2px;                
+}
+
+.navListAlign{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
