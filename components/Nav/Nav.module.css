@@ -2,12 +2,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 1rem;
+    color: #363636;
 }
 
 .leftContainer{
     display: flex;
     align-tems: center;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .navLists{
@@ -21,16 +23,18 @@
     align-items: center;
 }
 
-.beginnerZone{
+.beginnerZoneButton{
     display: flex;
     align-items: center;
     height: 1rem;
     border: none;
-    background-color: rgba(239, 226, 161, 1);
+    background-color: rgba(239, 226, 161, .5);
     border-radius: .5rem;
-    padding:.5rem;
+    padding:1rem;
     color: rgba(138, 117, 8, 1);
     text-align: center;
+    font-size: .9rem;
+    cursor: pointer;
 }
 
 .logoAlign {
@@ -52,4 +56,26 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+}
+
+
+.rightContainer{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #363636;
+}
+
+.logInButton{
+    background-color: #D9D9D9;
+    color: #363636;
+    padding: .5rem 1rem .5rem 1rem;
+    border-radius: 6px;
+}
+
+.signUpButton{
+     background-color:rgba(138, 117, 8, 1);
+    color: white;
+    padding: .5rem 1rem .5rem 1rem;
+    border-radius: 6px;
 }

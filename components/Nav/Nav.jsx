@@ -2,6 +2,7 @@ import { logo } from "../../assets";
 import Image from "next/image";
 import { BsFillGrid3X3GapFill } from "react-icons/bs";
 import { RiArrowDropDownFill } from "react-icons/ri";
+import { FiDownload, FiGlobe } from "react-icons/fi";
 import Link from "next/link";
 import styles from "./Nav.module.css";
 
@@ -36,8 +37,7 @@ export default function Nav() {
               <Link href="#">
                 <li>
                   <div className={styles.navList}>
-                    <p>Market</p>
-                    <RiArrowDropDownFill />
+                    <p>Markets</p>
                   </div>
                 </li>
               </Link>
@@ -87,8 +87,16 @@ export default function Nav() {
                 </li>
               </Link>
             </ul>
-            <div className={styles.beginnerZone}>Beginner Zone</div>
+            <div className={styles.beginnerZoneButton}>Beginner Zone</div>
           </div>
+        </div>
+
+        <div className={styles.rightContainer}>
+          <div className={styles.logInButton}>Log In</div>
+          <div className={styles.signUpButton}>Sign Up</div>
+          <FiDownload/>
+          <FiGlobe />
+          <p>USD</p>
         </div>
       </div>
     );

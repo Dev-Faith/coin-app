@@ -1,12 +1,27 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root{
   --primary-color: rgb(255, 239, 130);
   --secondary-color: rgb(239, 211, 69);
   --accent-color: rgb(186, 189, 66);
   --tertiary-color:rgb(130, 149, 75);
+  --font-family: 'Heebo', sans-serif;
+--font-family: 'Montserrat', sans-serif;
+--font-family: 'Poppins', sans-serif;
+--font-family: 'Outfit', sans-serif;
+}
+
+html{
+  font-family: var(--font-family);
 }
 
 a{
     text-decoration: none;
+    color: #363636;
 }
 
 li {
