@@ -21,6 +21,7 @@ export default function Nav() {
   const [isHovering, setIsHovering] = useState({
     gridIcon: false,
     buyCrypto: false,
+    Market: false,
     Trade: false,
     Derivatives: false,
     Earn: false,
@@ -46,7 +47,15 @@ export default function Nav() {
   };
    const handleMouseOutBuyCrypto     = ()=>{
     setIsHovering({...isHovering, buyCrypto:false});
-  }   
+  }  
+  //Market 
+  const handleMouseOverMarket = () => {
+    setIsHovering({...isHovering, Market:true}); 
+  }
+  const handleMouseOutMarket = () => {
+    setIsHovering({...isHovering, Market:false}); 
+  }
+  
   
 
   //Arrays for the mouse Overs 
@@ -202,8 +211,11 @@ export default function Nav() {
 
               <Link href="#">
                 <li>
-                  <div className={styles.navList}>
-                    <p>Markets</p>
+                  <div className={styles.navList}
+                   onMouseOver={handleMouseOverMarket}
+                   onMouseOut={handleMouseOutMarket}
+                  >
+                    <p className={cn({ activeNav: isHovering.Market })}>Markets</p>
                   </div>
                 </li>
               </Link>
