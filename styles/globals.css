@@ -27,3 +27,8 @@ a{
 li {
     list-style: none;
 }
+
+.activeNav{
+    color: var(--secondary-color);
+}
+
