@@ -34,15 +34,13 @@ export default function Nav() {
 
   //gridIcon
   const handleMouseOverGridIcon = () => {
-    setChecker(true);
     setIsHovering({...isHovering, gridIcon:true});
   };
-  const handleMouseOutGridIcon = ()=>{
-    setIsHovering({...isHovering, gridIcon:false});
+  const handleMouseOutGridIcon = () => {
+      setIsHovering({...isHovering, gridIcon:false});
   }   
 // buyCrypto
    const handleMouseOverBuyCrypto = () => {
-    setChecker(true);
     setIsHovering({...isHovering, buyCrypto:true});
   };
    const handleMouseOutBuyCrypto     = ()=>{
@@ -55,7 +53,13 @@ export default function Nav() {
   const handleMouseOutMarket = () => {
     setIsHovering({...isHovering, Market:false}); 
   }
-  
+  //Trade
+  const handleMouseOverTrade = () => {
+    setIsHovering({...isHovering, Trade:true}); 
+  }
+  const handleMouseOutTrade = () => {
+    setIsHovering({...isHovering, Trade:false}); 
+  }
   
 
   //Arrays for the mouse Overs 
@@ -135,6 +139,29 @@ export default function Nav() {
     },
   ];
 
+  const Trade = [
+    {
+      icon: <AiFillCreditCard/>,
+      title: "Spot Trading",
+      description: "Trade crypto with comprehensive tools",
+    },
+    {
+      icon: <MdGroups2/>,
+      title: "Margin Trading",
+      description: "Magnify profits with leverage",
+    },
+    {
+      icon: <RiHandHeartFill/>,
+      title: "Trading Bot",
+      description: "Earn passive profit without monitoring the market",
+    },
+    {
+      icon: <FaMoneyBill/>,
+      title: "Convert",
+      description: "The easiest way to trade",
+    },
+  ];
+
     return (
       <div className={styles.container}>
         <div className={styles.leftContainer}>
@@ -156,7 +183,7 @@ export default function Nav() {
               {isHovering.gridIcon && (
                   <div className={styles.mouseOverContGridIcon}>
                     {gridIcon.map((item) => {
-                      return (
+                      return (    
                         <div
                           className={styles.mouseOverElement}
                           key="item.title"
@@ -222,9 +249,32 @@ export default function Nav() {
 
               <Link href="#">
                 <li>
-                  <div className={styles.navList}>
-                    <p>Trade</p>
-                    <RiArrowDropDownFill />
+                  <div className={styles.navList}
+                  onMouseOver={handleMouseOverTrade}
+                  onMouseOut={handleMouseOutTrade}
+                  >
+                    <p className={cn({ activeNav: isHovering.Trade })}>Trade</p>
+                    {isHovering.Trade ? <RiArrowDropUpFill /> : <RiArrowDropDownFill />}
+                    {isHovering.Trade && (
+                  <div className={styles.mouseOverContTrade}>
+                    {Trade.map((item) => {
+                      return (
+                        <div
+                          className={styles.mouseOverElement}
+                          key="item.title"
+                        >
+                          <div className={styles.itemIcon}>{item.icon}</div>
+                          <div className={styles.TextOverDiv}>
+                            <p className={styles.overHead}>{item.title}</p>
+                            <p className={styles.overPara}>
+                              {item.description}
+                            </p>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+              )}
                   </div>
                 </li>
               </Link>
