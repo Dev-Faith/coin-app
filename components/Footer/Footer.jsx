@@ -122,16 +122,16 @@ export default function Footer () {
               <div className={styles.column}>
                 <p className={styles.header}>Community</p>
                 <div className={styles.linkIcons}>
-                  <BsFacebook/>
-                  <BsTwitter/>
-                  <BsTelegram/>
-                  <BsYoutube/>
-                  <BsDiscord/>
-                  <BsReddit/>
-                  <BsGithub/>
-                  <FaLinkedinIn/>
-                  <BsInstagram/>
-                  <SiCoinmarketcap/>
+                  <Link href ="#"><BsFacebook/></Link>
+                  <Link href ="#"><BsTwitter/></Link>
+                  <Link href ="#"><BsTelegram/></Link>
+                  <Link href ="#"><BsYoutube/></Link>
+                  <Link href ="#"><BsDiscord/></Link>
+                  <Link href ="#"><BsReddit/></Link>
+                  <Link href ="#"><BsGithub/></Link>
+                  <Link href ="#"><FaLinkedinIn/></Link>
+                  <Link href ="#"><BsInstagram/></Link>
+                  <Link href ="#"><SiCoinmarketcap/></Link>
                 </div>
               </div>
           </div>
