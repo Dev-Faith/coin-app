@@ -38,37 +38,40 @@ export default function Footer () {
            <div className={styles.column}>
              <p className={styles.header}>Service</p>
              <div className={styles.links}>
-                <p>About us</p>
-                <p>About us</p>
-                <p>About us</p>
-                <p>About us</p>
-                <p>About us</p>
-                <p>About us</p>
-                <p>About us</p>
+                <p>Help Center</p>
+                <p>Submit a Ticket</p>
+                <p>Fees</p>
+                <p>VIP</p>
+                <p>Identity Verification</p>
+                <p>Technical Support</p>
+                <p>Beginner's Guide</p>
+                <p>Official Verification Center</p>
+                <p>PoR (Proof of Reserves)</p>
+                <p>Sitemap</p>
              </div>
            </div>
            <div className={styles.column}>
              <p className={styles.header}>Business</p>
              <div className={styles.links}>
-                <p>About us</p>
-                <p>About us</p>
-                <p>About us</p>
-                <p>About us</p>
-                <p>About us</p>
-                <p>About us</p>
-                <p>About us</p>
+                <p>Token Listing</p>
+                <p>VeriCoin Labs</p>
+                <p>VeriCoin Ventures</p>
+                <p>Spotlight Application</p>
+                <p>Market Maker Incentive Program</p>
+                <p>P2P Merchant Apllication </p>
+                <p>Safeguard Program</p>
              </div>
            </div>
            <div className={styles.column}>
              <p className={styles.header}>Legal</p>
              <div className={styles.links}>
-                <p>About us</p>
-                <p>About us</p>
-                <p>About us</p>
-                <p>About us</p>
-                <p>About us</p>
-                <p>About us</p>
-                <p>About us</p>
+                <p>Terms of Use</p>
+                <p>Privacy Policy</p>
+                <p>Risk Disclosure Statement</p>
+                <p>AML & CFT</p>
+                <p>Special Treatment</p>
+                <p>VeriCoin Plus</p>
+                <p>Law Enforcement Requests</p>
              </div>
            </div>
           </div>
