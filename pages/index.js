@@ -13,8 +13,7 @@ export default function Home() {
         <title>Coin-App</title>
       </Head>
       <main className={styles.main}>
-        Hello World! How are we starting Dev-Sardius? 😁
-        Don't mind me, lemme commit this so I can get more greens on my profile😂
+        
       </main>
     </>
   )
