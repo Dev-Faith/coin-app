@@ -26,7 +26,7 @@ export default function Nav() {
     Derivatives: false,
     Earn: false,
     NFT: false,
-    wallet:false
+    Wallet:false
   });
   const [isHoveringEle, setIsHoveringEle] = useState(false);
   const [checker, setChecker] = useState(false);
@@ -59,6 +59,34 @@ export default function Nav() {
   }
   const handleMouseOutTrade = () => {
     setIsHovering({...isHovering, Trade:false}); 
+  }
+  //Derivatives
+  const handleMouseOverDeriv = () => {
+    setIsHovering({...isHovering, Derivatives:true}); 
+  }
+  const handleMouseOutDeriv = () => {
+    setIsHovering({...isHovering, Derivatives:false}); 
+  }
+  //Earn
+  const handleMouseOverEarn = () => {
+    setIsHovering({...isHovering, Earn:true}); 
+  }
+  const handleMouseOutEarn = () => {
+    setIsHovering({...isHovering, Earn:false}); 
+  }
+  //NFT
+  const handleMouseOverNFT = () => {
+    setIsHovering({...isHovering, NFT:true}); 
+  }
+  const handleMouseOutNFT = () => {
+    setIsHovering({...isHovering, NFT:false}); 
+  }
+  //Wallet
+  const handleMouseOverWallet = () => {
+    setIsHovering({...isHovering,Wallet:true}); 
+  }
+  const handleMouseOutWallet = () => {
+    setIsHovering({...isHovering, Wallet:false}); 
   }
   
 
@@ -162,6 +190,103 @@ export default function Nav() {
     },
   ];
 
+  const Derivatives = [
+    {
+      icon: <AiFillCreditCard/>,
+      title: "Futures Overviews",
+      description: "Browse all crypto derivatives",
+    },
+    {
+      icon: <MdGroups2/>,
+      title: "USD-Margined Contracts",
+      description: "USD-settled linear contracts",
+    },
+    {
+      icon: <RiHandHeartFill/>,
+      title: "Coin-Margined Contracts",
+      description: "Coin-settled inverse contracts",
+    },
+    {
+      icon: <FaMoneyBill/>,
+      title: "Futures Brawl",
+      description: "Predict gains and drops to win prizes",
+    },
+    {
+      icon: <FaMoneyBill/>,
+      title: "Futures Bonus",
+      description: "Trial funds and deduction coupons",
+    },
+    {
+      icon: <FaMoneyBill/>,
+      title: "Leveraged Tokens",
+      description: "Track price movement of the underlying asset with a fixed multiple",
+    },
+  ];
+
+  const Earn = [
+    {
+      icon: <AiFillCreditCard/>,
+      title: "Crypto Lending",
+      description: "Lend our crypto to earn interest",
+    },
+    {
+      icon: <MdGroups2/>,
+      title: "VeriCoin Earn",
+      description: "Invest to earn stable profit through a professional asset manager",
+    },
+    {
+      icon: <RiHandHeartFill/>,
+      title: "Spotlight",
+      description: "VeriCoin token lauch platform",
+    },
+    {
+      icon: <FaMoneyBill/>,
+      title: "VeriCoin Wealth",
+      description: "With VeriCoin wealth's structured products, growing your crypto assets has never been easier ",
+    },
+    {
+      icon: <FaMoneyBill/>,
+      title: "KCS Bonus",
+      description: "Hold KCS to earn daily bonuses",
+    },
+    {
+      icon: <FaMoneyBill/>,
+      title: "VeriCoin Pool",
+      description: "Empower hashrates to realize gains",
+    },
+    {
+      icon: <FaMoneyBill/>,
+      title: "Cloud Mining",
+      description: "Easy mining, easy profits",
+    },
+  ];
+
+  const NFT = [
+    {
+      icon: <AiFillCreditCard/>,
+      title: "Windvane",
+      description: "Buy, sell and swap NFTs instantly",
+    },
+    {
+      icon: <MdGroups2/>,
+      title: "Wonderland",
+      description: "NFT launch platform",
+    },
+    {
+      icon: <RiHandHeartFill/>,
+      title: "Fractional NFTs",
+      description: "The easiest way to invest in blue-chip NFTs",
+    },
+  ];
+
+  const Wallet = [
+    {
+      icon: <AiFillCreditCard/>,
+      title: "Halo Wallet",
+      description: "A self-custody social wallet - Yours to discover, invest and earn",
+    },
+  ];
+
     return (
       <div className={styles.container}>
         <div className={styles.leftContainer}>
@@ -213,7 +338,7 @@ export default function Nav() {
                     <p className={cn({ activeNav: isHovering.buyCrypto })}>Buy Crypto</p>
                     {isHovering.buyCrypto ? <RiArrowDropUpFill /> : <RiArrowDropDownFill />}
                     {isHovering.buyCrypto && (
-                  <div className={styles.mouseOverContBuyCrypto}>
+                  <div className={styles.mouseOverContTable}>
                     {buyCrypto.map((item) => {
                       return (
                         <div
@@ -256,7 +381,7 @@ export default function Nav() {
                     <p className={cn({ activeNav: isHovering.Trade })}>Trade</p>
                     {isHovering.Trade ? <RiArrowDropUpFill /> : <RiArrowDropDownFill />}
                     {isHovering.Trade && (
-                  <div className={styles.mouseOverContTrade}>
+                  <div className={styles.mouseOverContTable}>
                     {Trade.map((item) => {
                       return (
                         <div
@@ -281,36 +406,128 @@ export default function Nav() {
 
               <Link href="#">
                 <li>
-                  <div className={styles.navList}>
-                    <p>Derivatives</p>
-                    <RiArrowDropDownFill />
+                  <div className={styles.navList}
+                   onMouseOver={handleMouseOverDeriv}
+                  onMouseOut={handleMouseOutDeriv}
+                  >
+                    <p className={cn({ activeNav: isHovering.Derivatives })}>Derivatives</p>
+                     {isHovering.Derivatives ? <RiArrowDropUpFill /> : <RiArrowDropDownFill />}
+                    {isHovering.Derivatives && (
+                  <div className={styles.mouseOverContTable}>
+                    {Derivatives.map((item) => {
+                      return (
+                        <div
+                          className={styles.mouseOverElement}
+                          key="item.title"
+                        >
+                          <div className={styles.itemIcon}>{item.icon}</div>
+                          <div className={styles.TextOverDiv}>
+                            <p className={styles.overHead}>{item.title}</p>
+                            <p className={styles.overPara}>
+                              {item.description}
+                            </p>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+              )}
                   </div>
                 </li>
               </Link>
 
               <Link href="#">
                 <li>
-                  <div className={styles.navList}>
-                    <p>Earn</p>
-                    <RiArrowDropDownFill />
+                  <div className={styles.navList}
+                  onMouseOver={handleMouseOverEarn}
+                   onMouseOut={handleMouseOutEarn}
+                  >
+                    <p className={cn({ activeNav: isHovering.Earn })}>Earn</p>
+                     {isHovering.Earn ? <RiArrowDropUpFill /> : <RiArrowDropDownFill />}
+                    {isHovering.Earn && (
+                  <div className={styles.mouseOverContTable}>
+                    {Earn.map((item) => {
+                      return (
+                        <div
+                          className={styles.mouseOverElement}
+                          key="item.title"
+                        >
+                          <div className={styles.itemIcon}>{item.icon}</div>
+                          <div className={styles.TextOverDiv}>
+                            <p className={styles.overHead}>{item.title}</p>
+                            <p className={styles.overPara}>
+                              {item.description}
+                            </p>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+              )}
                   </div>
                 </li>
               </Link>
 
               <Link href="#">
                 <li>
-                  <div className={styles.navList}>
-                    <p>NFT</p>
-                    <RiArrowDropDownFill />
+                  <div className={styles.navList}
+                  onMouseOver={handleMouseOverNFT}
+                   onMouseOut={handleMouseOutNFT}
+                  >
+                    <p className={cn({ activeNav: isHovering.NFT })}>NFT</p>
+                     {isHovering.NFT ? <RiArrowDropUpFill /> : <RiArrowDropDownFill />}
+                    {isHovering.NFT && (
+                  <div className={styles.mouseOverContTable}>
+                    {NFT.map((item) => {
+                      return (
+                        <div
+                          className={styles.mouseOverElement}
+                          key="item.title"
+                        >
+                          <div className={styles.itemIcon}>{item.icon}</div>
+                          <div className={styles.TextOverDiv}>
+                            <p className={styles.overHead}>{item.title}</p>
+                            <p className={styles.overPara}>
+                              {item.description}
+                            </p>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+              )}
                   </div>
                 </li>
               </Link>
 
               <Link href="#">
                 <li>
-                  <div className={styles.navList}>
-                    <p>Wallet</p>
-                    <RiArrowDropDownFill />
+                  <div className={styles.navList}
+                  onMouseOver={handleMouseOverWallet}
+                   onMouseOut={handleMouseOutWallet}
+                  >
+                    <p className={cn({ activeNav: isHovering.Wallet })}>Wallet</p>
+                     {isHovering.Wallet ? <RiArrowDropUpFill /> : <RiArrowDropDownFill />}
+                    {isHovering.Wallet && (
+                  <div className={styles.mouseOverContTable}>
+                    {Wallet.map((item) => {
+                      return (
+                        <div
+                          className={styles.mouseOverElement}
+                          key="item.title"
+                        >
+                          <div className={styles.itemIcon}>{item.icon}</div>
+                          <div className={styles.TextOverDiv}>
+                            <p className={styles.overHead}>{item.title}</p>
+                            <p className={styles.overPara}>
+                              {item.description}
+                            </p>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+              )}
                   </div>
                 </li>
               </Link>
@@ -322,9 +539,9 @@ export default function Nav() {
         <div className={styles.rightContainer}>
           <div className={styles.logInButton}>Log In</div>
           <div className={styles.signUpButton}>Sign Up</div>
-          <FiDownload />
-          <FiGlobe />
-          <p>USD</p>
+          <FiDownload className={styles.downloadIcon} />
+          <FiGlobe className={styles.globeIcon} />
+          <p className={styles.USD}>USD</p>
         </div>
       </div>
     );
