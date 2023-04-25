@@ -10,25 +10,29 @@ export default function Footer () {
            <div className={styles.column}>
              <p className={styles.header}>Corporate</p>
              <div className={styles.links}>
-                <p>About us</p>
-                <p>About us</p>
-                <p>About us</p>
-                <p>About us</p>
-                <p>About us</p>
-                <p>About us</p>
-                <p>About us</p>
+                <p>About Us</p>
+                <p>Join us</p>
+                <p>Media kit</p>
+                <p>Afiliate Program</p>
+                <p>Whistleblower Contact</p>
+                <p>Blog</p>
+                <p>News & Announcements</p>
+                <p>Referral</p>
+                <p>Security</p>
              </div>
            </div>
            <div className={styles.column}>
              <p className={styles.header}>Products</p>
              <div className={styles.links}>
-                <p>About us</p>
-                <p>About us</p>
-                <p>About us</p>
-                <p>About us</p>
-                <p>About us</p>
-                <p>About us</p>
-                <p>About us</p>
+                <p>Spot Trading</p>
+                <p>Margin Trading</p>
+                <p>Convert</p>
+                <p>Futures Trading</p>
+                <p>VeriCoin Earn</p>
+                <p>Crypto Lending</p>
+                <p>Calculator</p>
+                <p>Windvane NFT Marketplace</p>
+                <p>Halo Wallet</p>
              </div>
            </div>
            <div className={styles.column}>
