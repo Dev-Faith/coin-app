@@ -135,6 +135,10 @@ export default function Footer () {
               </div>
           </div>
         </div>
+        <div className={styles.separator}></div>
+        <div className={styles.bottomPart}>
+          <p>CopyRight © 2017 - 2023 VeriCoin.com. All Rights Reserved.</p>
+        </div>
       </div>
     );
 };

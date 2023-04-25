@@ -45,3 +45,14 @@
     padding-top: 2rem;
     font-size: 1.3rem;
 }
+
+.separator{
+    width: 1200px;
+    height: 1px;
+    background-color: gray;
+    margin-top: 4rem;
+}
+
+.bottomPart{
+    text-align: center;
+}
