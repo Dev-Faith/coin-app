@@ -1,0 +1,69 @@
+import {logo} from "../../assets";
+import {BsFacebook, BsTwitter, BsTelegram, BsYoutube, BsDiscord, BsReddit, BsGithub, BsInstagram} from "react-icons/bs";
+import {FaLinkedinIn} from "react-icons/fa";
+import {SiCoinmarketcap} from "react-icons/si";
+import Link from "next/link";
+import Image from "next/image";
+import styles from "./Footer.module.css";
+export default function Footer () {
+    return (
+      <div className={styles.footer}>
+        <Image src={logo} alt="logo" height="75" width="150" />
+        <div className={styles.linksCont}>
+          <div className={styles.upperDiv}>
+            <div className={styles.column}>
+              <p className={styles.header}>Corporate</p>
+              <div className={styles.links}>
+                <Link href ="#"><p>About Us</p></Link>
+                <Link href ="#"><p>Join us</p></Link>
+                <Link href ="#"><p>Media kit</p></Link>
+                <Link href ="#"><p>Afiliate Program</p></Link>
+                <Link href ="#"><p>Whistleblower Contact</p></Link>
+                <Link href ="#"><p>Blog</p></Link>
+                <Link href ="#"><p>News & Announcements</p></Link>
+                <Link href ="#"><p>Referral</p></Link>
+                <Link href ="#"><p>Security</p></Link>
+              </div>
+            </div>
+            <div className={styles.column}>
+              <p className={styles.header}>Products</p>
+              <div className={styles.links}>
+                <Link href ="#"><p>Spot Trading</p></Link>
+                <Link href ="#"><p>Margin Trading</p></Link>
+                <Link href ="#"><p>Convert</p></Link>
+                <Link href ="#"><p>Futures Trading</p></Link>
+                <Link href ="#"><p>VeriCoin Earn</p></Link>
+                <Link href ="#"><p>Crypto Lending</p></Link>
+                <Link href ="#"><p>Calculator</p></Link>
+                <Link href ="#"><p>Windvane NFT Marketplace</p></Link>
+                <Link href ="#"><p>Halo Wallet</p></Link>
+              </div>
+            </div>
+            <div className={styles.column}>
+              <p className={styles.header}>Service</p>
+              <div className={styles.links}>
+                <Link href ="#"><p>Help Center</p></Link>
+                <Link href ="#"><p>Submit a Ticket</p></Link>
+                <Link href ="#"><p>Fees</p></Link>
+                <Link href ="#"><p>VIP</p></Link>
+                <Link href ="#"><p>Identity Verification</p></Link>
+                <Link href ="#"><p>Technical Support</p></Link>
+                <Link href ="#"><p>Beginner's Guide</p></Link>
+                <Link href ="#"><p>Official Verification Center</p></Link>
+                <Link href ="#"><p>PoR (Proof of Reserves)</p></Link>
+                <Link href ="#"><p>Sitemap</p></Link>
+              </div>
+            </div>
+  
+        
+    
+            
+          </div>
+        </div>
+        <div className={styles.separator}></div>
+        <div className={styles.bottomPart}>
+         <p>CopyRight ©2023 VeriCoin.com. All Rights Reserved.</p>
+        </div>
+      </div>
+    );
+};
